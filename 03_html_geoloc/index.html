@@ -6,21 +6,21 @@
 	<script>
 
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition( function(res) {
-				/*console.log(res.coords.latitude);*/
-				document.getElementById('latitude').innerHTML = res.coords.latitude;
-				document.getElementById('longitude').innerHTML = res.coords.longitude;
-				document.getElementById('altitude').innerHTML = res.coords.altitude;
+			
+			navigator.geolocation.watchPosition( function(req) {
+				document.getElementById('latitude').innerHTML = req.coords.latitude;
+				document.getElementById('longitude').innerHTML = req.coords.longitude;
+				document.getElementById('altitude').innerHTML = req.coords.altitude;
+				document.getElementById('speed').innerHTML = req.coords.speed;
 			}, function (error) {
 				console.log(error);
 			});
-			
 		} else {
 			alert ('Votre navigateur ne prend pas en compte la geolocalisaiton html5');
 		}
 	</script>
 </head>
 <body>
-	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span> et votre altitude <span id="altitude"></span></p>
+	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span>, votre altitude <span id="altitude"></span> et votre vitesse de <span id="speed"></span></p>
 </body>
 </html>
