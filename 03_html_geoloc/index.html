@@ -6,9 +6,11 @@
 	<script>
 
 		if (navigator.geolocation) {
-			console.log(navigator.geolocation);
 			navigator.geolocation.getCurrentPosition( function(res) {
-				console.log(res);
+				/*console.log(res.coords.latitude);*/
+				document.getElementById('latitude').innerHTML = res.coords.latitude;
+				document.getElementById('longitude').innerHTML = res.coords.longitude;
+				document.getElementById('altitude').innerHTML = res.coords.altitude;
 			}, function (error) {
 				console.log(error);
 			});
@@ -19,6 +21,6 @@
 	</script>
 </head>
 <body>
-	
+	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span> et votre altitude <span id="altitude"></span></p>
 </body>
 </html>
