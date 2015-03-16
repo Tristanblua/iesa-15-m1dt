@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newss>
+	<news>
+		<title>Programmation</title>
+		<description>Cours de prog</description>
+		<link>http://google.com</link>
+		<items>
+			<item>
+				<title>Programmation</title>
+				<description>Cours de prog</description>
+				<link>http://google.com</link>
+			</item>
+		</items>
+	</news>
+
+	<news>
+		<title>Pêche</title>
+		<description>Pêche au saumon</description>
+		<link>http://peche.com</link>
+	</news>
+</newss>
