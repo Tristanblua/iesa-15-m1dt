@@ -4,8 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Geoloc</title>
 	<script>
+
 		if (navigator.geolocation) {
-			alert ('L\'API de geolocalisation en html 5 est disponible');
+			console.log(navigator.geolocation);
+			navigator.geolocation.getCurrentPosition( function(res) {
+				console.log(res);
+			}, function (error) {
+				console.log(error);
+			});
+			
 		} else {
 			alert ('Votre navigateur ne prend pas en compte la geolocalisaiton html5');
 		}
