@@ -3,15 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Geoloc</title>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 	<script>
+
 
 		if (navigator.geolocation) {
 			
+
+			
 			navigator.geolocation.watchPosition( function(req) {
+				var centerpos = new google.maps.LatLng(req.coords.latitude, req.coords.longitude);
+				var optionsGmaps = {
+					center: centerpos,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					zoom: 15
+				};
 				document.getElementById('latitude').innerHTML = req.coords.latitude;
 				document.getElementById('longitude').innerHTML = req.coords.longitude;
 				document.getElementById('altitude').innerHTML = req.coords.altitude;
 				document.getElementById('speed').innerHTML = req.coords.speed;
+				new google.maps.Map(document.getElementById("map"), optionsGmaps);
 			}, function (error) {
 				var info = "Erreur lors de la géolocalisation : ";
 				switch(error.code) {
@@ -29,6 +40,9 @@
 					break;
 				} alert(info);
 			});
+
+			
+
 		} else {
 			alert ('Votre navigateur ne prend pas en compte la geolocalisaiton html5');
 		}
@@ -36,5 +50,7 @@
 </head>
 <body>
 	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span>, votre altitude <span id="altitude"></span> et votre vitesse de <span id="speed"></span> .</p>
+
+	<div id="map" style="width:500px;height:500px;"></div>
 </body>
 </html>
