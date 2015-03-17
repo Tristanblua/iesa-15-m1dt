@@ -9,20 +9,26 @@
 
 		if (navigator.geolocation) {
 			
-
-			
-			navigator.geolocation.watchPosition( function(req) {
+			navigator.geolocation.getCurrentPosition( function(req) {
 				var centerpos = new google.maps.LatLng(req.coords.latitude, req.coords.longitude);
 				var optionsGmaps = {
 					center: centerpos,
 					mapTypeId: google.maps.MapTypeId.ROADMAP,
 					zoom: 15
 				};
+				
+				var map = new google.maps.Map(document.getElementById("map"), optionsGmaps);
+
+				marker = new google.maps.Marker({
+					position: centerpos,
+					map: map,
+					title:"Vous êtes ici"
+					
+				});
+
 				document.getElementById('latitude').innerHTML = req.coords.latitude;
 				document.getElementById('longitude').innerHTML = req.coords.longitude;
 				document.getElementById('altitude').innerHTML = req.coords.altitude;
-				document.getElementById('speed').innerHTML = req.coords.speed;
-				new google.maps.Map(document.getElementById("map"), optionsGmaps);
 			}, function (error) {
 				var info = "Erreur lors de la géolocalisation : ";
 				switch(error.code) {
@@ -49,7 +55,7 @@
 	</script>
 </head>
 <body>
-	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span>, votre altitude <span id="altitude"></span> et votre vitesse de <span id="speed"></span> .</p>
+	<p>Votre latitude est <span id="latitude"></span>, votre longitude <span id="longitude"></span>, votre altitude <span id="altitude"></span>.</p>
 
 	<div id="map" style="width:500px;height:500px;"></div>
 </body>
