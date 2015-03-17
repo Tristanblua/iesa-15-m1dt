@@ -1,0 +1,32 @@
+	/* Element */ 
+	p {
+		font-size: 1em;
+	}
+
+	/* id */ 
+	#toctitle {
+		color: red;
+	}
+
+	/* Element + classe */
+	li.toclevel-1{
+		padding: 3px 0;
+	}
+
+	/* class */ 
+	.thumb {
+		float: right;
+	}
+
+	/* Sélecteurs descendants */ 
+	ul li a {
+		text-decoration: none;
+		color: #000;
+	}
+	
+	/* Sélecteurs groupés */ 
+	h1, h2, h3, h4, h5 {
+		text-align: center;
+		font-size: 2em;
+		border-bottom: 1px solid #ccc;
+	}
