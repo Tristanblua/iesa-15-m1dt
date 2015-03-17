@@ -32,6 +32,15 @@
 	/* Sélecteurs groupés */ 
 	h1, h2, h3, h4, h5 {
 		text-align: center;
-		font-size: 2em;
+		font-size: 23px;
+		font-weight: bold;
 		border-bottom: 1px solid #ccc;
 	}
+	
+	h1 {
+		text-transform: uppercase;
+	}
+
+	h2 {
+		font-variant: small-caps;
+	} 
