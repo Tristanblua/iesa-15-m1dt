@@ -1,6 +1,11 @@
+	@font-face {
+		font-family: 'retro';
+		src: url('Retro.ttf') format('trueType');
+	}
 	/* Element */ 
 	p {
 		font-size: 1em;
+		font-family: 'retro', Arial;
 	}
 
 	/* id */ 
