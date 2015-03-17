@@ -13,7 +13,21 @@
 				document.getElementById('altitude').innerHTML = req.coords.altitude;
 				document.getElementById('speed').innerHTML = req.coords.speed;
 			}, function (error) {
-				console.log(error);
+				var info = "Erreur lors de la géolocalisation : ";
+				switch(error.code) {
+					case error.TIMEOUT:
+						info += "Timeout !";
+					break;
+					case error.PERMISSION_DENIED:
+						info += "vous n'avez pas donné la permission";
+					break;
+					case error.POSITION_UNAVAILABLE:
+						info += "La position n'a pas pu être déterminée";
+					break;
+					case error.UNKNOWN_ERROR:
+						info += "Erreur inconnue";
+					break;
+				} alert(info);
 			});
 		} else {
 			alert ('Votre navigateur ne prend pas en compte la geolocalisaiton html5');
