@@ -1,3 +1,5 @@
+http://daringfireball.net/projects/markdown/syntax
+
 # Javascript
 
 * Google Map : Mettre des dimensions dans la DIV
