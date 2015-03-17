@@ -28,6 +28,14 @@
 		text-decoration: none;
 		color: #000;
 	}
+
+	ul li:first-child {
+		letter-spacing: 1em;
+	} 
+
+	ul li:last-child {
+		line-height: 2em;
+	}
 	
 	/* Sélecteurs groupés */ 
 	h1, h2, h3, h4, h5 {
@@ -44,3 +52,7 @@
 	h2 {
 		font-variant: small-caps;
 	} 
+
+	i {
+		font-style: italic;
+	}
