@@ -2,6 +2,12 @@
 		font-family: 'retro';
 		src: url('Retro.ttf') format('trueType');
 	}
+
+	body {
+		background-image: url(http://wallpaper4me.com/images/wallpapers/colorfulshrooms-462211.jpeg);
+		background-position: center center;
+		padding: 10px 50px;
+	}
 	/* Element */ 
 	p {
 		font-size: 1em;
