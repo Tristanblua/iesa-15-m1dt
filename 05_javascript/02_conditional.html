@@ -9,11 +9,8 @@
 	var hasBasket = 0;
 	var year = 21;
 	
-	if (hasBasket > 0) {
-		alert("pas de basket !");
-	}
-	else if ( year < 18) {
-		alert("T'es trop jeune dégage");
+	if ( year < 18 || hasBasket > 0) {
+		alert("Casse toi");
 	} else if (year < 21) {
 		alert("Montre moi tes papiers");
 	} else {
@@ -22,3 +19,4 @@
 	</script>
 </body>
 </html>
+
