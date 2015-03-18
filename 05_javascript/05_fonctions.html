@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function sayHello() {
+		saySmth("bonjour");
+	}
+
+	function beNice() {
+		sayHello();
+		sayTy();
+	}
+
+	function sayTy() {
+		saySmth("merci");
+	}
+
+	function saySmth(smth) {
+		console.log(smth);
+	}
+
+	beNice();
+
+	function multiply(a, b) {
+		return (a * b);
+	}
+
+	function divide(a, b) {
+		return (a / b);
+	}
+
+	function minus(a, b) {
+		return (a - b);
+	}
+
+	function add(a, b) {
+		return (a + b);
+	}
+
+	var c = 10;
+	var d = 20;
+	var e = 30;
+	var f = 40;
+	var g = 50;
+
+	resultAdd = add(e, f);
+
+	result200 = multiply(c, d);
+	result400 = multiply(d, d);
+	result = minus(add(c, d), divide(multiply(e, f), g));
+	
+	console.log(resultAdd);
+	console.log(result200);
+	console.log(result400);
+	console.log(result);
+
+	</script>
+</body>
+</html>
