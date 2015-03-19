@@ -5,4 +5,4 @@ http://daringfireball.net/projects/markdown/syntax
 * Google Map : Mettre des dimensions dans la DIV
 
 # Other
-* RAPH BOSSE SUR UN IDE QUI LAG CA ME TEND
+* Signature -> première ligne d'une fonction (nom, paramètres) + langage typé (java, C++ ...) on voit le type des paramétres (int...) et le type de valeur retourné.
