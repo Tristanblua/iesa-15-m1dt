@@ -3,7 +3,6 @@
 	$data = '<?xml version="1.0" encoding="UTF-8"?><rss><item><title>I&amp;#8217;m retiring after serving as 4chan&amp;#8217;s founder and administrator for more than 11 years,...</title><description>&lt;p&gt;I&amp;#8217;m retiring after serving as 4chan&amp;#8217;s founder and administrator for more than 11 years, from the age of 15. You can read the full announcement on the &lt;a href="https://www.4chan.org/news" title="4chan - News - THE NEXT CHAPTER" target="_blank"&gt;4chan News page&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;—moot&lt;/p&gt;</description><link>http://blog.4chan.org/post/108740766397</link><guid>http://blog.4chan.org/post/108740766397</guid><pubDate>Wed, 21 Jan 2015 11:05:37 -0500</pubDate><category>4chan</category><category>moot</category><category>retirement</category><category>mootxico</category><category>goodnight sweet prince</category></item></rss>';	
 	
 	$xml = simplexml_load_string($data);
-	var_dump($xml);
 
 	$array = array();
 
@@ -49,7 +48,7 @@
 	}
 
 	function buildHtmlTableFor($array, $wantedProperties) {
-		$html = "<table>";
+		$html = "<table border=1>";
 		foreach ($array as $key => $value) {
 			$html .= buildHtmlRowFor($value, $wantedProperties);
 		}
