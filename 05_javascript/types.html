@@ -30,15 +30,38 @@
 	// console.log(title.slice(3, 8));
 	// console.log(title.substring(3, 8));
 
-	var s1 = "Hello";
-	var s2 = "hEllo";
+	// var s1 = "Hello";
+	// var s2 = "hEllo";
 
-	if (s1.ignoreCase == s2.ignoreCase) {
-		console.log("ca roule !");
-	} else {
-		console.log("ca roule pas");
-	}
+	// if (s1.ignoreCase == s2.ignoreCase) {
+	// 	console.log("ca roule !");
+	// } else {
+	// 	console.log("ca roule pas");
+	// }
 	
+	/********* ARRAY *********/
+	// var values = [50, 60, "Mouse"];
+
+	/********* DATE *********/
+	var today = new Date();
+	var birthdate = new Date(1991, 5, 24);
+	var y2k = new Date(2000,10,1,0,0,0);
+	var y3k = new Date(3010,10,3);
+	console.log(today);
+	console.log(birthdate);
+	console.log(y2k);
+	console.debug(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
+	console.debug(birthdate.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+	console.debug(y2k.getFullYear(), y2k.getMonth(), y2k.getDate(), y2k.getHours(), y2k.getMinutes(), y2k.getSeconds());
+	console.log(birthdate.toDateString());
+
+	y3k.setMonth(y3k.getMonth() + 14);
+	console.log(y3k);
+
+	if (today > y2k) {
+		console.log("oui");
+	};
+
 	</script>
 </head>
 <body>
