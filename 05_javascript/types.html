@@ -45,8 +45,11 @@
 	/********* DATE *********/
 	var today = new Date();
 	var birthdate = new Date(1991, 5, 24);
-	var y2k = new Date(2000,10,1,0,0,0);
+	var y2k = new Date(2000,10,3,0,0,0);
 	var y3k = new Date(3010,10,3);
+	var s1 = new Date(2015, 4, 15, 10, 23, 43);
+	var s2 = new Date(2015, 4, 15, 12, 11, 57);
+
 	console.log(today);
 	console.log(birthdate);
 	console.log(y2k);
@@ -60,6 +63,30 @@
 
 	if (today > y2k) {
 		console.log("oui");
+	} else {
+		console.log("non");
+	}
+
+	if (y2k.getMonth() == y3k.getMonth()) {
+		console.log("oui");
+	} else {
+		console.log("non");
+	}
+
+	if (today.getDate() <= y2k.getDate()) {
+		console.log("oui");
+	} else {
+		console.log("non");
+	}
+
+	if (y2k.getDate() === y3k.getDate()) {
+		console.log("oui");
+	} else {
+		console.log("non");
+	}
+
+	if (s1.getFullYear() == s2.getFullYear() && s1.getMonth() == s2.getMonth() && s1.getDate() == s2.getDate()) {
+		console.log(s1, '==', s2);
 	};
 
 	</script>
