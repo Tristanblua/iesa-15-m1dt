@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="qunit-git.js"></script>
+	<link rel="stylesheet" type="text/css" href="qunit-git.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+	<script type="text/javascript">
+	function sayHello() {
+		saySmth("bonjour");
+	}
+
+	function beNice() {
+		sayHello();
+		sayTy();
+	}
+
+	function sayTy() {
+		saySmth("merci");
+	}
+
+	function saySmth(smth) {
+		console.log(smth);
+	}
+
+	beNice();
+
+	function multiply(a, b) {
+		return (a * b);
+	}
+
+	function divide(a, b) {
+		return (a / b);
+	}
+
+	function minus(a, b) {
+		return (a - b);
+	}
+
+	function add(a, b) {
+		return (a + b);
+	}
+
+	var c = 10;
+	var d = 20;
+	var e = 30;
+	var f = 40;
+	var g = 50;
+
+	resultAdd = add(e, f, g);
+
+	result200 = multiply(c, d);
+	result400 = multiply(d, d);
+	result = minus(add(c, d), divide(multiply(e, f), g));
+	
+	console.log(resultAdd);
+	console.log(result200);
+	console.log(result400);
+	console.log(result);
+
+
+	QUnit.test("Those additions succeeded",
+		function(assert) {
+			assert.equal(5, add(3, 2), "add(3, 2)");
+			assert.equal(15, multiply(5, 3), "multiply(5, 3)");
+			assert.equal(10, minus(20, 10), "minus(20, 10)");
+			assert.equal(10, divide(100, 10), "divide(100, 10)");
+		});
+	</script>
+</body>
+</html>
