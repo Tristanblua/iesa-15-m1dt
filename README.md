@@ -13,5 +13,6 @@ http://daringfireball.net/projects/markdown/syntax
 # Other
 * Signature -> première ligne d'une fonction (nom, paramètres) + langage typé (java, C++ ...) on voit le type des paramétres (int...) et le type de valeur retourné.
 * ESSAYER
+* Selenium -> fais des test utilisateurs, simule un utilisateur (seleniumhq.org)
 
 

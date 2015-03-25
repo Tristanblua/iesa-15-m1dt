@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="qunit-git.js"></script>
+	<link rel="stylesheet" type="text/css" href="qunit-git.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+	<script type="text/javascript">
+
+
+	function add(a, b) {
+		return a + b;
+	}
+
+
+	QUnit.test("Those additions succeeded",
+		function(assert) {
+			assert.equal(5, add(3, 2), "add(3, 2)");
+			assert.equal(10, add(6, 4), "add(3, 2)");
+			assert.equal(10, add(6), "add(3, 2)");
+			assert.ok(isNaN(add(6)), "add(3, 2)");
+			assert.ok(isNaN(add(6, 7)), "add(3, 2)");
+			assert.ok(isNaN(add(6, "7")), "add(3, 2)");
+		});
+	</script>
+</body>
+</html>
